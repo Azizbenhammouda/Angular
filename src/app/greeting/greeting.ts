@@ -19,6 +19,7 @@ export class Greeting {
   showSecret = false;
   hobbies = ["Reading", "Coding", "Gaming", "Traveling"];
   countries: string[] = []; 
+  selectedUser = "";
   constructor(private dataService: DataService) { }  // Inject the service
 
   ngOnInit() {
@@ -28,4 +29,9 @@ export class Greeting {
     alert("Button was clicked!");
     this.message="you clicked the button"
   }
+   onUserSelected(name: string) {  
+    this.selectedUser = name;
+    alert(`You selected: ${name}`);
+  }
 }
+
