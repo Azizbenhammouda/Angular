@@ -1,0 +1,32 @@
+<p>greeting works!</p>
+<h1>{{ message }}</h1>
+<img [src]="imageUrl" alt="Angular Logo" width="200">
+<br>
+<button [disabled]="isButtonDisabled" (click)="onButtonClick()">Click Me</button>
+<br><br>
+<input [(ngModel)]="userName" placeholder="Enter your name">
+<p>Hello, {{ userName }}!</p>
+<br><br>
+<button (click)="showSecret = !showSecret">Toggle Secret Message</button>
+@if (showSecret) {
+  <p>🎉 This is a secret message!</p>
+}
+<br><br>
+<h3>My Hobbies:</h3>
+<ul>
+  @for (hobby of hobbies; track hobby) {
+    <li>{{ hobby }}</li>
+  }
+</ul>
+<br><br>
+<h3>Countries:</h3>
+<ul>
+  @for (country of countries; track country) {
+    <li>{{ country }}</li>
+  }
+</ul>
+<br><br>
+<app-user-card [userName]="'Ahmed'" [userAge]="25"></app-user-card>
+<app-user-card [userName]="'Fatima'" [userAge]="30"></app-user-card>
+
+
