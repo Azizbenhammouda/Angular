@@ -1,5 +1,5 @@
 # Angular Fundamentals Cheat Sheet 
-## Before HTTP Requests
+
 
 ---
 
